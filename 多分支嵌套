@@ -92,10 +92,8 @@ public class Lottery {
 			System.out.println("0");
 		}
 		input.close();
-	}
-}
-
-
 
         /********* End *********/
+    }	
+}
 ```
