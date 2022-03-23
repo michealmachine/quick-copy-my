@@ -1,3 +1,40 @@
+第1关 指定条件输入
+```
+package step1;
+
+import java.util.Scanner;
+
+public class Password {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int inputCount = 0;
+        String password;
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        int i =0;
+        do{
+            
+            String s = input.nextLine();
+            inputCount=s.length();
+            if(inputCount==6){
+                System.out.print(s+" success!");
+                return;
+            }
+            i++;
+            
+        }while(i<=2);
+        if(i==3){
+            System.out.print("ops!");
+        }
+        
+        /********* End *********/
+        input.close();
+    }
+}
+```
+第2关 找到最高分
+```
 package step2;
 
 import java.util.Scanner;
@@ -52,3 +89,4 @@ class Main {
         return true;
     }
 }
+```
