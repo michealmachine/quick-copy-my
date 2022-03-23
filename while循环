@@ -1,0 +1,75 @@
+第1关 批量打印 ASCII 码
+```
+package step1;
+
+import java.util.Scanner;
+
+public class PrintAscii {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int begin =  input.nextInt();
+        int end = input.nextInt();
+        input.close();
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        int i;
+        i=begin;
+        while(i<=end){
+            char z =(char)i;
+            
+            if(z>=65&&z<=90||z>=97&&z<=122){
+            System.out.print(i+" ");
+            System.out.println(z);
+            }
+            i++;
+
+
+
+        } 
+
+
+
+
+        /********* End *********/
+    }
+}
+```
+第2关 计算平均数
+```
+package step2;
+import java.util.Scanner;
+
+public class Mean {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Double mean = 0.0;
+        int num=0;
+        int count = 0;
+        Double sum = 0.0;
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        int data = input.nextInt();
+        if(data==0){
+            System.out.print("0.00");
+        }
+        else{
+        while(data!= 0){
+            
+            num++;
+            sum+=data;
+            data = input.nextInt();  
+
+        }
+        mean=sum/num;
+
+        
+        /********* End *********/
+
+        System.out.print(String.format("%.2f", mean));
+        }
+    }
+}
+```
+
