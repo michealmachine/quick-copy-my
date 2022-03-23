@@ -1,0 +1,53 @@
+```
+package step1;
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        int year = input.nextInt();
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        if(year%4==0&&year%100!=0||year%400==0){
+        System.out.print("yes");}
+        else {System.out.print("no");}
+        
+
+
+        /********* End *********/
+        input.close();
+    }
+}
+```
+```
+package step2;
+import java.util.Scanner;
+
+public class Abs {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        double x = input.nextDouble();
+
+        // 求 x 的绝对值。
+        /********* Begin *********/
+        if(x<0){
+            double a= 0-x;
+            System.out.print(a);
+        }
+        else if (x>0){
+            System.out.print(x);
+        }
+        if(x==0){
+            System.out.print("ops");
+        }
+
+
+        /********* End *********/
+
+        input.close();
+    }
+}
+```
