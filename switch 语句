@@ -1,0 +1,89 @@
+第1关 判断周末
+```
+package step1;
+import java.util.Scanner;
+
+public class Weekend {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String word = input.next();
+
+
+        /********* Begin *********/
+          
+        switch(word){  
+            case "Sunday":System.out.print("Weekend"); 
+            break;
+            case "Monday":System.out.print("Weekday"); 
+            break;
+            case "Tuesday":System.out.print("Weekday");
+            break;
+            case "Wednesday":System.out.print("Weekday");  
+            break;
+            case "Thursday":System.out.print("Weekday");  
+            break;
+            case "Friday":System.out.print("Weekday"); 
+            break;   
+            case "Saturday":System.out.print("Weekend");  
+            break;
+            default:  System.out.print("ops");  
+}  
+
+
+        /********* End *********/
+
+        input.close();
+    }
+}
+```
+第2关 输出年份生肖
+```
+package step2;
+import java.util.Scanner;
+
+public class Zodiac {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int year = input.nextInt();
+
+        /********* Begin *********/
+        int a = year%12;
+        switch(a){
+            case 1:System.out.print("鸡");break;
+            case 2:System.out.print("狗");break;
+            case 3:System.out.print("猪");break;
+            case 4:System.out.print("鼠");break;
+            case 5:System.out.print("牛");break;
+            case 6:System.out.print("虎");break;
+            case 7:System.out.print("兔");break;
+            case 8:System.out.print("龙");break;
+            case 9:System.out.print("蛇");break;
+            case 10:System.out.print("马");break;
+            case 11:System.out.print("羊");break;
+            case 0:System.out.print("猴");break;
+            case -1:System.out.print("羊");break;
+            case -2:System.out.print("马");break;
+            case -3:System.out.print("蛇");break;
+            case -4:System.out.print("龙");break;
+            case -5:System.out.print("兔");break;
+            case -6:System.out.print("虎");break;
+            case -7:System.out.print("牛");break;
+            case -8:System.out.print("鼠");break;
+            case -9:System.out.print("猪");break;
+            case -10:System.out.print("狗");break;
+            case -11:System.out.print("鸡");break;
+
+
+
+
+        } 
+
+
+
+        /********* End *********/
+
+        input.close();
+    }
+}
+```
