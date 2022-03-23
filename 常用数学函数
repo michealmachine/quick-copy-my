@@ -1,0 +1,118 @@
+第1关 计算三角形的角度
+```
+package step1;
+import java.util.Scanner;
+
+public class Angle {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        Double x1 = input.nextDouble();
+        Double y1 = input.nextDouble();
+        Double x2 = input.nextDouble();
+        Double y2 = input.nextDouble();
+        Double x3 = input.nextDouble();
+        Double y3 = input.nextDouble();
+
+        input.close();
+
+        double A = 0.0;
+        double B = 0.0;
+        double C = 0.0;
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        double pi = Math.PI; 
+        double d=Math.pow((x2-x3),2)+Math.pow((y2-y3),2);
+        double e=Math.pow((x1-x3),2)+Math.pow((y1-y3),2);
+        double f=Math.pow((x1-x2),2)+Math.pow((y1-y2),2);
+        double a=Math.pow(d,0.5);
+        double b=Math.pow(e,0.5);
+        double c=Math.pow(f,0.5);
+        
+        A = Math.acos((a*a-b*b-c*c)/(-2*b*c));
+        B = Math.acos((b*b-a*a-c*c)/(-2*a*c));
+        C = Math.acos((c*c-b*b-a*a)/(-2*a*b));
+        A=Math.toDegrees(A);
+        B=Math.toDegrees(B);
+        C=Math.toDegrees(C);
+       
+
+
+
+        /********* End *********/
+
+        
+
+        System.out.print(String.format("%.2f %.2f %.2f", A, B, C));
+    }
+}
+```
+第2关 计算正五边形的面积
+```
+package step2;
+import java.util.Scanner;
+
+public class Pentagon {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        Double l = input.nextDouble();
+
+
+        input.close();
+
+        Double S = 0.0;
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        double pi = Math.PI;
+        double y=5*l*l;
+        double x=4*Math.tan(pi/5);
+        S=y/x;
+
+
+
+        /********* End *********/
+
+        
+
+        System.out.print(String.format("%.2f", S));
+    }
+}
+```
+第3关 计算正多变形的面积
+```
+package step3;
+import java.util.Scanner;
+
+public class Ploygon {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        Double l = input.nextDouble();
+        int n = input.nextInt();
+
+
+        input.close();
+
+        Double S = 0.0;
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        double pi =Math.PI;
+        double y = n*l*l;
+        double x = 4*Math.tan(pi/n);
+        S=y/x;
+        
+
+
+
+        /********* End *********/
+
+        
+
+        System.out.print(String.format("%.2f", S));
+    }
+}
+```
