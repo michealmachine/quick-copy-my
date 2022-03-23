@@ -1,0 +1,67 @@
+package step1;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String inStr = input.nextLine();
+        input.close();
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        for(int i=0;i<inStr.length();i++){
+            if((i+2)%2==0)System.out.println(inStr.charAt(i));
+        }
+        /********* End *********/
+
+
+
+    }
+}
+package step2;
+
+import java.util.Scanner;
+
+public class Main {
+
+    final static int STATE_NO_SMALE = 0;
+    final static int STATE_PREPARE_SMALE = 1;
+    final static int STATE_READY_SMALE = 2;
+    final static int STATE_SAMLE = 3;
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String inStr = input.nextLine();
+        int flag=0;
+        int count=0;
+        for (int i=0;i<inStr.length();i++)
+        {
+            if (i+1<inStr.length())
+            {
+                if (0==(int) inStr.charAt(i)-48&&0==(int) inStr.charAt(i+1)-48)
+                {
+                    flag=2;
+                }
+            }
+            if (1==(int) inStr.charAt(i)-48&&flag>=2)
+            {
+                count++;
+                if (i+1<inStr.length())
+                {
+                    if (0==(int) inStr.charAt(i+1)-48)
+                    {
+                        flag=0;
+                    }
+                }
+            }
+        }
+        for(int j=1;j<=count;j++)
+        {
+            System.out.print("哈");
+        }
+        /********* End *********/
+
+    }
+
+}
