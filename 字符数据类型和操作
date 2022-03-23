@@ -1,0 +1,91 @@
+第1关 给出 ASCII 码对应的字符
+```
+package step1;
+import java.util.Scanner;
+
+public class Ascii {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        int ascii = input.nextInt();
+
+        char ch = ' ';
+        input.close();
+
+        //请在指定位置填写代码。
+        /******/
+        if(ascii<128&&ascii>=1){
+        ch = (char)ascii;}
+
+
+
+        /********* End *********/
+        System.out.print(ch);
+    }
+}
+```
+第2关 给出字符对应的 Unicode 码
+```
+package step2;
+import java.util.Scanner;
+
+public class Unicode {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        char ch = input.next().charAt(0);
+        int X = 0;
+        input.close();
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        X = (int)ch;
+
+
+        /********* End *********/
+        System.out.print(X+"");
+    }
+}
+```
+第3关 字符加解密
+```
+
+package step3;
+import java.util.Scanner;
+
+public class Transform {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        char in = input.next().charAt(0);
+        char out = ' ';
+        input.close();
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        if (Character.isLowerCase(in)) {
+            out = (char) (in - 3 - 32);
+            System.out.print(out);
+        } else if (Character.isUpperCase(in)) {
+            out = (char) (in  -3+32+26);
+            System.out.print(out);
+        } else if (Character.isDigit(in)) {
+            if(in==48){
+                System.out.print("0");
+            }
+            else{
+            int add=(int)out;
+            add =  (58 - in);
+            System.out.print(add);}
+
+        }
+        else{
+            System.out.print(in);
+        }
+
+
+        /********* End *********/
+      
+    }
+}
+```
