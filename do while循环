@@ -1,0 +1,54 @@
+package step2;
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String stuNumStr = "";
+        int studentCount = 0;
+        int maxScore = 0;
+        int newScore = 0;
+        String maxName = "";
+        String newName = "";
+        // 请在指定位置填写代码。
+        /********* Begin *********/
+        String stScore;
+        do{
+        stScore=input.next();
+        studentCount=(int)stScore.charAt(0)-48;
+        }while(studentCount<=0);
+        int count=studentCount-1;
+        maxName=input.next();
+        maxScore=input.nextInt();
+        do{
+            newName=input.next();
+            newScore=input.nextInt();
+            if(newScore>maxScore){
+                maxScore=newScore;
+                maxName=newName; 
+                }
+                count--;
+        }while(count>0);
+        /********* End *********/
+        System.out.println(String.format("%s %d", maxName, maxScore));
+        input.close();
+
+    }
+
+    public static boolean isNumeric(String str) {
+        if (str.length() == 0) {
+            return false;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                return false;
+            }
+        }
+        int i = Integer.parseInt(str);
+        if(i<=0){
+            return false;
+        }
+        return true;
+    }
+}
