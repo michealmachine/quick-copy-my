@@ -1,16 +1,12 @@
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+.idea/
+.gradle/
 build/
+out/
+target/
+*.iml
 
-### VS Code ###
-.vscode/
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
