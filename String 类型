@@ -1,0 +1,178 @@
+第1关 简单字符串处理
+```
+package step1;
+import java.util.Scanner;
+
+public class EasyString {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str = input.nextLine();
+        input.close();
+
+        char head = ' ';
+        char end = ' ';
+        int length = 0;
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+          head=str.charAt(0);
+        length=str.length();
+        end = str.charAt(length-1);
+
+        /********* End *********/
+
+        System.out.print(String.format("%d %c %c", length, head, end));
+    }
+}
+```
+第2关 检查 SSN
+```
+package step2;
+import java.util.Scanner;
+
+public class SSN {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String ssn = input.nextLine();
+        input.close();
+        String output = "";
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        output = "yes";
+        if(Character.isDigit(ssn.charAt(0))){
+            int a=  ssn.indexOf('1');
+            int b=ssn.lastIndexOf('1');
+            if(a!=b){
+                output = "no";}
+        }
+        
+        if(Character.isDigit(ssn.charAt(1))){
+        int a=  ssn.indexOf('2');
+        int b=ssn.lastIndexOf('2');
+
+            if(a!=b){
+                output = "no";}
+    }
+        if(Character.isDigit(ssn.charAt(2))){
+        int a=  ssn.indexOf('3');
+        int b=ssn.lastIndexOf('3');
+        if(a!=b){
+            output = "no";}
+    }
+        if(ssn.charAt(3)!='-'){
+        output = "no";
+    }
+        if(Character.isDigit(ssn.charAt(4))){
+        int a=  ssn.indexOf('4');
+        int b=ssn.lastIndexOf('4');
+
+        if(a!=b){
+            output = "no";}
+    }
+    if(Character.isDigit(ssn.charAt(5))){
+        int a=  ssn.indexOf('5');
+        int b=ssn.lastIndexOf('5');
+
+        if(a!=b){
+            output = "no";}
+    }
+        if(ssn.charAt(6)!='-'){
+        output = "no";
+    }
+        if(Character.isDigit(ssn.charAt(7))){
+        int a=  ssn.indexOf('6');
+        int b=ssn.lastIndexOf('6');
+
+        if(a!=b){
+            output = "no";}
+    }
+        if(Character.isDigit(ssn.charAt(8))){
+        int a=  ssn.indexOf('7');
+        int b=ssn.lastIndexOf('7');
+        if(a!=b){
+            output = "no";}
+    }
+    if(Character.isDigit(ssn.charAt(9))){
+        int a=  ssn.indexOf('8');
+        int b=ssn.lastIndexOf('8');
+
+        if(a!=b){
+            output = "no";}
+    }
+        if(Character.isDigit(ssn.charAt(10))){
+        int a=  ssn.indexOf('9');
+        int b=ssn.lastIndexOf('9');
+
+        if(a!=b){
+            output = "no";}
+    }
+        if(Character.isDigit(ssn.charAt(11))){
+        int a=  ssn.indexOf('0');
+        int b=ssn.lastIndexOf('0');
+        if(a!=b){
+            output = "no";}
+    }
+        if(ssn.length() != 12){
+        output = "no";
+    }
+        for(int i=0;i<=11;i++){
+                  if(Character.isLetter(ssn.charAt(i))){
+                      output ="no";
+        }
+    }
+
+        
+        
+    
+
+    /********* End *********/
+
+        System.out.print(output);
+}
+}
+```
+第3关 解析中文姓名
+```
+package step3;
+import java.util.Scanner;
+
+public class SubString {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String name  = input.nextLine();
+        input.close();
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        if(name.endsWith("*")){
+            String a = name.trim();
+            
+            
+
+            String xing = a.substring(0,2);
+            String ming = a.substring(2,5);
+            System.out.println(xing);
+            System.out.print(ming);
+       
+
+
+        }
+        if(name.endsWith(" ")){
+            String b = name.trim();
+            String c = b+"  ";
+            String xing = c.substring(0,1);
+            String ming = c.substring(1,3);
+
+        System.out.println(xing);
+        System.out.print(ming);}
+
+
+
+
+
+        /********* End *********/
+    }
+}
+```
