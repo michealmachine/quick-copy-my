@@ -1,0 +1,94 @@
+判断身体状况
+```
+package step1;
+import java.util.Scanner;
+
+public class BMI {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double height = input.nextDouble();
+        double weight = input.nextDouble();
+
+        // 判断身体状况。
+        /********* Begin *********/
+        double Bml = weight/Math.pow(height,2);
+        if(height<3&&height>0||weight<200&&weight>0){
+            if (Bml<18.5){
+            System.out.print("A");
+            }
+            else if (Bml>=18.5&&Bml<25){
+            System.out.print("B");
+            }
+            else if (Bml>=25&&Bml<30){
+            System.out.print("C");
+            }
+            else if (Bml>=30){
+            System.out.print("D");
+            }
+
+
+
+        }
+        else{
+            System.out.print("illegal");
+        }
+
+
+        /********* End *********/
+    }
+}
+```
+第3关 彩票游戏
+```
+package step2;
+import java.util.Scanner;
+
+public class Lottery {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int prize = input.nextInt();
+        int lottery = input.nextInt();
+        input.close();
+
+        // 请在指定位置填写代码。
+        /********* Begin *********/
+        int a = prize/100;  
+        int b = (prize%100)/10;  
+        int c = prize%10; 
+    
+		// Get digits from lottery
+		int d = lottery / 100;
+		int e = lottery % 100 / 10;
+		int f = lottery % 10;
+		
+		// Check the guess
+		if(lottery == prize)
+			System.out.println("10000");		
+		else if((d == a && e == c && f == b)
+			||(d == b && e == a && f == c)
+			||(d == b && e == c && f == a)
+			||(d == c && e == a && f == b)
+			||(d == c && e == b && f == a))
+		{
+			System.out.println("3000");
+		}
+		else if(d == a || d == b || d == c
+			||e == a || e == b || e == c
+			||f == a || f == b || f == c)
+		{
+			System.out.println("200");
+		}
+		else
+		{
+			System.out.println("0");
+		}
+		input.close();
+	}
+}
+
+
+
+        /********* End *********/
+```
