@@ -1,0 +1,85 @@
+循环嵌套
+package step1;
+
+import java.util.Scanner;
+
+public class Trangle {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int line = input.nextInt();
+        input.close();
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        for(int i=0;i<line;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        /********* End *********/
+    }
+}
+package step2;
+import java.util.Scanner;
+
+public class Symmetry {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String str = input.nextLine();
+        input.close();
+
+        String result = "";
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        int x=0;int j=str.length()-1;
+        for(int i=0;i<str.length()/2;i++,j--){
+            if(str.charAt(i)!=str.charAt(j)){
+                x++;
+                break;
+            }
+        }
+        if(x!=0)result="no";
+        else result="yes";
+
+
+        /********* End *********/
+
+        System.out.print(result);
+    }
+}
+package step3;
+
+import java.util.Scanner;
+
+public class Prime {
+    public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        int range = input.nextInt();
+        input.close();
+        boolean ifPrime = false;
+        String template = "%4d";
+        int lineCount = 0;
+
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        int x;
+        int y=0;
+        for(int i=2;i<=range;i++){
+            x=0;
+            for(int j=2;j<=i/2;j++){
+                if(i%j==0){
+                    x++;
+                    break;
+                }
+            }
+            if(x==0){System.out.printf("%4d",i);y++;}
+            if(x==0&&y%8==0)System.out.print("\n");
+        }
+
+        /********* End *********/
+    }
+}
