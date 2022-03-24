@@ -1,0 +1,164 @@
+找出最大值
+```
+package step1;
+
+class Main {
+    
+    public static void main(String[] args) {
+        System.out.println(max(3,4,5));
+        System.out.println(max(100,200));
+        System.out.println(max(4.5,5.6,3.1,10.62));
+        System.out.println(max(1.0,2.0));
+    }
+
+
+    //请在指定位置填写代码。
+    /********* Begin *********/
+    public static int max(int x,int y,int z){
+        int max1=x;
+        if(y>max1)max1=y;
+        if(z>max1) max1=z;
+        return max1;
+        }
+        public static int max(int x,int y){
+        int max1=x;
+        if(y>max1) max1=y;
+        return max1;
+        }
+        public static double max(double x,double y){
+        double max1=x;
+        if(y>max1) max1=y;
+        return max1;
+        }
+        public static double max(double x,double y,double z,double za){
+        double max1=x;
+        if(y>max1) max1=y;
+        if(z>max1) max1=z;
+        if(za>max1) max1=za;
+       return max1;
+        }
+
+
+    /********* End *********/
+}
+
+```
+求对数
+```
+package step2;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(log(10,10));
+        System.out.println(log(10.0,10));
+        System.out.println(log(10,10.0));
+        System.out.println(log(10.0,10.0));
+        System.out.println(log(10));
+        System.out.println(log(10.0));
+    }
+
+    //请在指定位置填写代码。
+    /********* Begin *********/
+      public static double log(int i){
+       double cc=Math.log(i);
+        return cc;
+        }
+        public static double log(double i){
+        double cc =Math.log(i);
+        return cc;
+        }
+        public static double log(int i,int j){
+        double cc=Math.log(i)/Math.log(j);
+        return cc;
+        }
+        public static double log(int i,double j){
+        double cc =Math.log(i)/Math.log(j);
+        return cc;
+        }
+        public static double log(double i,int j){
+        double cc =Math.log(i)/Math.log(j);
+        return cc;
+        }
+        public static double log(double i,double j){
+        double cc=Math.log(i)/Math.log(j);
+        return cc;
+        }
+
+
+
+    /********* End *********/
+}
+```
+ 多种进制加法器
+ ```
+ package step3;
+
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+        int d = input.nextInt();
+
+        if(d<2){
+            add(a,b,c==1);
+        } else {
+            add(a,b,c==1,d);
+        }
+    }
+
+    //请在指定位置填写代码。
+    /********* Begin *********/
+    public static void add(int a,int b,boolean c){
+        int sum=a+b;
+        if(c){
+                while(sum>=10){
+       sum/=10;
+        }
+        System.out.println(sum);
+        }
+        if(!c){
+        sum=sum%10;
+        System.out.println(sum);
+        }
+        if(c){
+       System.out.print("true");
+        }
+        else{
+        System.out.print("false");
+        }
+        }
+       public static void add(int a,int b,boolean c,int d){
+        int x=0;
+        if(c) x=1;
+        int y=0;
+        int sum=a+b+x;
+        int num=sum;
+        if(c){
+        while(sum>=d){
+        sum%=d;
+        y++;
+        }
+        System.out.println(sum);
+        }
+        if(!c){
+        sum=sum%d;
+        System.out.println(sum);
+       }
+        if(y>1||sum==1){
+        System.out.print("true");
+        }
+        else{
+    System.out.print("false");
+        }
+        }
+
+
+
+
+    /********* End *********/
+}
+ ```
