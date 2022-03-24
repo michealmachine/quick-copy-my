@@ -1,0 +1,92 @@
+打印等级
+```
+package step1;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        //请在指定位置填写代码。
+        /********* Begin *********/
+        double fs=input.nextDouble();
+        System.out.println(printGrade(fs));
+
+        
+
+        /********* End *********/
+    }
+
+
+    public static String printGrade(double s) {
+        if(s>=90.0){
+            return "A";
+        } else if (s>=80.0) {
+            return "B";
+        } else if (s>=70.0) {
+            return "C";
+        } else if (s>=60.0) {
+            return "D";
+        } else {
+            return "E";
+        }
+    }
+}
+
+```
+递归求阶乘
+```
+package step2;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a = input.nextInt();
+        input.close();
+        int b = sss(a);
+        System.out.print(b);
+    }
+
+    /********* Begin *********/
+    public static int sss(int a){
+        if(a==1 || a==0){
+        return 1;
+        }
+        else return a*sss(a-1);
+        }
+    
+
+
+    /********* End *********/
+}
+```
+汉诺塔问题
+```
+package step2;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a = input.nextInt();
+        input.close();
+        int b = sss(a);
+        System.out.print(b);
+    }
+
+    /********* Begin *********/
+    public static int sss(int a){
+        if(a==1 || a==0){
+        return 1;
+        }
+        else return a*sss(a-1);
+        }
+    
+
+
+    /********* End *********/
+}
+```
