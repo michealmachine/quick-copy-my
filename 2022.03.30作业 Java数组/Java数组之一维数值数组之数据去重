@@ -1,0 +1,36 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArrTest {
+    public static void main(String[] args) {
+        // 请在Begin-End间编写代码
+        /********** Begin **********/
+        // 接收给定的数据
+    Scanner input=new Scanner(System.in);
+    int n=input.nextInt();
+    int [] arr=new int[n];
+    for(int i=0;i<n;i++){
+        arr[i]=input.nextInt();
+    }
+        // 通过临时数组对原数组去重，最后将临时数组赋值给原数组
+    int [] aar=new int[n];
+    int z=0;
+    for(int i=0;i<n;i++){
+        int t=0;
+        for(int j=0;j<i;j++){
+            if(arr[i]==arr[j]){
+                t=1;
+                break;
+            }
+        }
+        if(t==0)
+        aar[z++]=arr[i];
+    }
+        // 打印去重后的数组值
+    for(int i = 0;i<z;i++){
+        System.out.println(aar[i]);
+    }
+        /********** End **********/
+
+    }
+}

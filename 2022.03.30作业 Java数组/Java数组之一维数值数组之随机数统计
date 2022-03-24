@@ -1,0 +1,38 @@
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class RandomTest {
+    public static void main(String[] args) {
+        // 请在Begin-End间编写代码
+        /********** Begin **********/
+        // 接收给定数据
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int m = input.nextInt();
+        // 创建Random对象，并设置随机种子
+        Random random = new Random(m);
+        // 定义数组添加数据
+        int[] array = new int[n];
+        int[] array1 = new int[n];
+        for(int i = 0;i < n;i ++){
+            array[i] = random.nextInt(20);
+        }
+        // 统计每个数出现的次数
+        for (int j = 0;j < n;j ++){
+            for (int k = 0;k < n;k ++) {
+                if (j == array[k]){
+                    array1[j] ++;
+                }
+            }
+        }
+        // 输出结果
+        for (int s = 0;s < n;s ++){
+            if (array1[s] != 0){
+                System.out.println(s + "出现了:" + array1[s] + " 次");
+            }
+        }
+        /********** End **********/
+
+    }
+}

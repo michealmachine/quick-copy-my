@@ -1,0 +1,26 @@
+/*
+任务：创建一维字符数组并赋值（a，B，A，Z，v，b），并转化该数组中的大小写。
+提示：a-z的ASCII码分别对应：97-122，A-Z的ASCII码分别对应：65-90。
+输出样式：转化后的数组：[x,y,z]
+*/
+import java.util.Arrays;
+
+public class MaxTest {
+    public static void main(String[] args) {
+        // 请在Begin-End间编写代码
+        /********** Begin **********/
+        // 第一步：创建数组并赋值，值为a，B，A，Z，v，b共6个字符。
+        char[] array = new char[]{'a','B','A','Z','v','b'};
+        // 第二步：遍历数组元素，如果为小写，请转化为大写，如果为大写，请转化为小写。大小写的ASCII码相差32。
+        for (int i = 0;i < array.length;i ++) {
+            if (array[i] >= 'a' && array[i] <= 'z'){
+                array[i] = (char)(array[i] - 32 );
+            }else {
+                array[i] = (char)(array[i] + 32);
+            }
+        }
+        // 第三步：输出数组元素
+        System.out.println("转化后的数组：" + Arrays.toString(array));
+        /********** End **********/
+    }
+}

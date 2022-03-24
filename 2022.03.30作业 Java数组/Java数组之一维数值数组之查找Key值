@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class FindTest {
+    public static void main(String[] args) {
+        // 请在 Begin-End 间编写代码
+        /********** Begin **********/
+        // 定义变量
+        int n=0;
+        int min=0;
+        int mid;
+        int count=0;
+        // 接收给定数据
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();     // 数组长度
+        int key = scanner.nextInt();     // 需要查找的元素
+        // 定义数组
+        int[] arr = new int[i];
+        // 给数组赋值
+        while (!scanner.hasNext("#")){
+            int x = scanner.nextInt();
+            arr[n]=x;
+            n++;
+        }
+        // 查找给定元素索引，并输出查找次数
+        int max=arr.length-1;
+        mid=(max+min)/2;
+        while(true) {
+            count++;
+            if(key<arr[mid]) {        // 如果目标元素小于中点元素
+                max = mid-1;            // max向mid前移动
+            }else if(key>arr[mid]) { // 如果目标元素大于中点元素
+                min = mid+1;            // min向mid后移动
+            }else {
+                System.out.print("索引值："+mid+"。查找次数："+count+"。");            // 找到目标元素
+                break;
+            }
+            if(max<min) {      // 没有找到的情况
+                System.out.print("没有找到");
+                break;
+            }
+            mid=(max+min)/2;     // 重新计算中间索引值
+        }
+        /********** End **********/
+    }
+    }

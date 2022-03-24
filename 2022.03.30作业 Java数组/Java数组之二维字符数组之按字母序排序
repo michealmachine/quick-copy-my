@@ -1,0 +1,30 @@
+import java.util.Arrays;
+
+public class Transpose {
+    public static void main(String[] args) {
+        // 定义二维数组并初始化
+        char[][] a = {{'d','v','g','r'},{'h','s','r','a'},{'q','e','t','z'},{'o','p','d','s'}};
+
+        for (int i = 0; i < 4 ;i++){
+            for (int j = 0; j < 4; j++){
+                int n = j + 1;
+                for (int m = i; m < 4; m++){
+                    for (;n < 4; n++){
+                        if (a[i][j] < a[m][n]){
+                            char max = a[m][n];
+                            a[m][n] = a[i][j];
+                            a[i][j] = max;
+                        }
+                    }
+                    n = 0;      //此处是给n从第二个一维数组开始取0这个坐标
+                }
+            }
+        }
+        for (int i = 0; i < 4; i++){
+            for (int j = 0; j < 4; j++){
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}

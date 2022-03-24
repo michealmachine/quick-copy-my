@@ -1,0 +1,32 @@
+// 请在Begin-End间编写完整代码，类名请使用Transpose
+        /********** Begin **********/
+public class Transpose{
+	public static void main(String[] args){
+		int[][] arr1={{5,6,7},
+			{15,65,43},
+                        {32,43,22},
+			{11,88,6},
+                        {4,98,66}};
+		int[][] arr2={{94,65,31,87,21},
+			{48,2,0,71,98},
+			{38,29,66,88,100},};
+         int[][] arr3 = new int[arr1.length][arr2[0].length];
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr2[0].length; j++) {
+                for (int k = 0; k < arr2.length; k++) {
+                    arr3[i][j] += arr1[i][k] * arr2[k][j];
+                }
+            }
+        }
+        print(arr3);
+    }
+    private static void print(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+        /********** End **********/

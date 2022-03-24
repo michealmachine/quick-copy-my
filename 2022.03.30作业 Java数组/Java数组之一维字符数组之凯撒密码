@@ -1,0 +1,25 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class PassWord {
+    public static void main(String[] args) {
+        // 请在Begin-End间编写完整代码
+        /********** Begin **********/
+        // 接收给定字符串
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        String cipher = input.next();
+        // 将密文添加进字符数组
+        char[] array = cipher.toCharArray();//将密文一个一个加入数组
+        // 破解密文
+       for (int i = 0;i < array.length;i ++){
+            array[i] = (char)(array[i] + n);
+            if (array[i] > 'Z'){
+                array[i] = (char)(array[i] - 26);
+            }
+        }
+        // 输出明文
+        System.out.println(array);
+        /********** End **********/
+    }
+}
