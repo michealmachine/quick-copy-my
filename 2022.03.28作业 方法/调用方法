@@ -1,5 +1,5 @@
 打印等级
-```
+
 package step1;
 
 import java.util.Scanner;
@@ -33,9 +33,9 @@ public class Main {
     }
 }
 
-```
+
 递归求阶乘
-```
+
 package step2;
 
 import java.util.Scanner;
@@ -61,9 +61,8 @@ public class Main {
 
     /********* End *********/
 }
-```
 汉诺塔问题
-```
+
 package step2;
 
 import java.util.Scanner;
@@ -89,4 +88,4 @@ public class Main {
 
     /********* End *********/
 }
-```
+
