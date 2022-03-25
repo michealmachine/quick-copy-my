@@ -63,29 +63,25 @@ public class Main {
 }
 汉诺塔问题
 
-package step2;
-
+package step3;
 import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int a = input.nextInt();
-        input.close();
-        int b = sss(a);
-        System.out.print(b);
+public class Main {  
+    public static void main(String[] args) {  
+        Scanner input = new Scanner(System.in);  
+        int n = input.nextInt();  
+        input.close();  
+        hanoi(n,"A","B","C");  
     }
-
-    /********* Begin *********/
-    public static int sss(int a){
-        if(a==1 || a==0){
-        return 1;
-        }
-        else return a*sss(a-1);
-        }
-    
-
-
-    /********* End *********/
+    /********* Begin *********/  
+    public static void hanoi(int x, String a, String b, String c) {  
+        if (x == 1) {  
+            System.out.println(a+"->"+c);  
+            return;  
+        }  
+        hanoi(x-1, a,c,b);  
+        System.out.println(a+"->"+c);  
+        hanoi(x-1, b,a,c);  
+    }
+    /********* End *********/  
 }
 
