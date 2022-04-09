@@ -1,0 +1,74 @@
+// 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
+/********** Begin **********/
+
+// 声明一个名为 com.model 的包
+package com.model;
+// 定义一个 Movie 的公开类
+public class Movie{
+    // 该类具有电影名称、电影类别、电影时长、地区等属性（都是字符串类型、私有）
+    private String name,category,duration,region;
+
+    // 定义获取和设置电影属性的方法
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public String getCategory(){
+        return category;
+    }
+    public void setCategory(String category){
+        this.category=category;
+    }
+    public String getDuration(){
+        return duration;
+    }
+    public void setDuration(String duration){
+        this.duration=duration;
+    }
+    public String getRegion(){
+        return region;
+    }
+    public void setRegion(String region){
+        this.region=region;
+    }
+    
+    // 定义获取电影信息的方法，无返回值
+    public void getInformation(){
+        System.out.printf("电影名称：%s，电影类别：%s，电影时长：%s，地区：%s。",name,category,duration,region);
+    }
+    
+ }   
+/********** End **********/
+
+
+// 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
+/********** Begin **********/
+// 声明一个名为 com.test 的包
+package com.test;
+// 导入 Movie 类
+import com.model.*;
+// 导入 java.util.Scanner 类
+import java.util.Scanner;
+
+// 定义一个公开的 Test 类
+public class Test{
+    // 定义主方法
+    public static void main(String[] args) {
+        
+    
+        // 实例化 Movie 对象
+        Movie sc=new Movie();
+        Scanner ss=new Scanner(System.in);
+        // 将键盘四次输入的电影信息赋值给 Movie 对象
+        sc.setName(ss.next());
+        sc.setCategory(ss.next());
+        sc.setDuration(ss.next());
+        sc.setRegion(ss.next());
+        
+        // 调用获取 Movie 信息的方法
+        sc.getInformation();
+    }
+}
+/********** End **********/
