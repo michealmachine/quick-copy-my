@@ -1,0 +1,47 @@
+/**
+ * 任务：已知一个球的半径为 12.0，求该球的体积。
+ * 类名为：Sphere
+ */
+
+public class Sphere {
+
+// 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
+
+/********** Begin **********/
+
+    // 定义圆的半径和π，π为 Math中的π
+    public double R;
+    public double pi=Math.PI;
+
+    // 无参构造
+    public Sphere(){
+        R=12.0;
+    }
+
+    // 有参构造
+    public Sphere(double R){
+        this.R=R;
+    }
+    /**
+     * 定义一个方法，该方法实现计算球的体积，返回值为double，携带一个参数，为球的半径
+     */
+    public double volume(double R){
+        return 4/3.0*pi*Math.pow(R,3);
+    }
+
+    // 定义主方法
+    public static void main(String[] args) {
+        
+    
+
+    // 通过无参构造创建球对象
+    Sphere sc=new Sphere();
+
+    // 调用计算球体积的方法，将半径 r 的值传入
+    System.out.printf("球的体积为%.2f",sc.volume(sc.R));
+    // 四舍五入格式化不换行输出球的体积，输出格式：球的体积为xx
+    }
+
+/********** End **********/
+
+}
