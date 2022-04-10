@@ -1,0 +1,64 @@
+/**
+ * 任务：定义一个 Dog 类，继承 Animal 类，定义自己的性别属性，并定义获取和设置性别属性的方法和 sleep 方法。
+ * 类名为：Dog
+ */
+
+// 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
+/********** Begin **********/
+// 定义一个Dog的公开类，并继承Animal类
+public class Dog extends Animal{
+    //定义小狗的性别sex，字符串类型
+    public String sex;
+    public Dog(String type, String name, int age) {
+        super(type,name,age);
+    }
+    // 定义获取和设置小狗性别的方法。
+    public String getSex(){
+        return sex;
+    }
+    public void setSex(String sex){
+        this.sex=sex;
+    }
+    //定义小狗的睡觉方法，实现输出：一只名为xx性别为xx的小狗，现在xx岁，它正在睡觉
+    public void sleep(){
+        System.out.printf("一只名为%s性别为%s的小狗，现在%s岁，它正在睡觉",this.getName(),this.sex,this.getAge());
+    }
+
+}
+/********** End **********/
+
+public class Animal {
+    private String type;
+    private String name;
+    private int age;
+
+    public Animal(String type, String name, int age) {
+        this.type = type;
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
