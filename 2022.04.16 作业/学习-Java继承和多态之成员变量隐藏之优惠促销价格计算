@@ -1,0 +1,26 @@
+/**
+ * 任务：计算商品打折后的价格
+ */
+class Total {
+    double totalMoney = 50.00;
+    public double getTotalMoney(){
+        return totalMoney;
+    }
+}
+// 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
+/********** Begin **********/
+// 定义一个Seal的公开类，并继承Total类
+public class Seal extends Total{
+    // 定义两个变量，分别代表折扣和总价格，类型为double
+    double totalMoney,discount;
+    // 定义一个有参构造方法，带两个参数，依次为折扣和总价格
+    Seal(double totalMoney,double discount){
+        this.totalMoney=totalMoney;
+        this.discount=discount;
+    }
+    // 定义一个方法名为sealX的方法，返回类型为double，计算打折后的商品价格并返回
+    public double sealX(){
+        return totalMoney*discount;
+    }
+}
+/********** End **********/
