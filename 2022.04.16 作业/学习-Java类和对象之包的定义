@@ -1,0 +1,13 @@
+// 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
+/********** Begin **********/
+// 声明一个名为 com.pojo 的包
+package com.pojo;
+
+public class Student {
+    public static String[] info(){
+        // 实现返回所有学生的功能，在该方法中定义一个 String 数组
+       String[] arr={"小明","小红","小强","小刚"};
+       return arr;
+    }
+}
+/********** End **********/
