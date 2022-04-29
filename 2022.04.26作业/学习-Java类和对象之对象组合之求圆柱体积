@@ -1,0 +1,57 @@
+/**
+ * 任务：已知圆柱的底面半径为 20，高为 50，求该圆柱的体积。
+ */
+
+
+// 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
+
+/********** Begin **********/
+
+// 定义一个圆类，类名为 Circle
+class Circle{
+    // 定义两个量，分别为半径和π值
+    double pi=Math.PI;
+    double radius;
+    // 有参构造器
+    Circle(double radius){
+        this.radius=radius;
+    }
+    // 定义一个方法，实现求圆面积，将圆面积返回，返回类型为double
+    public double eara(){
+        return pi*Math.pow(radius,2);
+    }
+}
+// 定义一个公开的圆柱类 Cylinder
+public class Cylinder{
+
+    double high;
+    // 定义圆柱中的高
+    Circle circle;
+    // 引用圆类
+    Cylinder(double high,Circle circle){
+        this.high=high;
+        this.circle=circle;
+    }
+    // 有参构造
+    public double volume(){
+        return circle.eara()*high;
+    }
+
+    /**
+     * 定义一个方法，该方法实现计算圆柱的体积，返回值为double
+     */
+
+    
+    // 定义主方法
+    public static void main(String[] args) {
+        // 通过有参构造创建圆对象，将底面半径设置为 20
+        Circle c=new Circle(20.0);
+        // 通过有参构造创建圆柱对象，将圆柱的高设置为 50，将圆对象传入
+        Cylinder h=new Cylinder(50.0,c);
+    // 调用计算圆柱积的方法
+
+    // 四舍五入格式化不换行输出圆柱的体积，输出格式：圆柱的体积为xx
+        System.out.printf("圆柱的体积为%.2f",h.volume());
+        }
+    }
+/********** End **********/
