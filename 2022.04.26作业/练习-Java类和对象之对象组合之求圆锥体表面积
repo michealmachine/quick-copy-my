@@ -1,0 +1,65 @@
+/**
+ * 任务：已知圆锥的母线为 15，底面半径为 8，求圆锥的表面积。
+ */
+
+
+// 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
+
+/********** Begin **********/
+
+// 定义一个圆类，类名为 Circle
+class Circle{
+    // 定义两个量，分别为半径和π值
+    double radius;
+    double PI=Math.PI;
+    // 有参构造器
+    Circle(double radius){
+        this.radius=radius;
+    }
+    // 定义一个方法，实现求圆面积，将圆面积返回，返回类型为double
+    public double area(){
+        return PI*Math.pow(radius,2);
+    }
+}
+// 定义一个扇形类，类名为 Sector
+class Sector{
+    double radius;
+    double length;
+    Sector(double radius,double length){
+        this.radius=radius;
+        this.length=length;
+    }
+    // 有参构造器
+    public double area(){
+        return Math.PI*radius*length;
+    }
+    // 定义一个方法，实现求圆锥侧面积，将侧面积返回，返回类型为double，
+}
+// 定义一个公开的圆锥类 Cone
+public class Cone{
+    Circle circle;
+    Sector sector;
+    Cone(Circle circle,Sector sector){
+        this.circle=circle;
+        this.sector=sector;
+    }
+    /**
+     * 定义一个方法，该方法实现计算圆锥的表面积，返回值为double
+     */
+    public double area(){
+        return circle.area()+sector.area();
+    }
+    public static void main(String[] args) {
+        // 定义主方法
+        Circle circle=new Circle(8);
+        // 通过有参构造创建圆对象，将底面半径设置为 8
+        Sector sector=new Sector(8,15);
+        // 通过有参构造创建扇形对象，将扇形所需的半径和母线传入
+        Cone cone=new Cone(circle,sector);
+        // 通过有参构造创建圆锥对象，将圆对象和矩形对象传入
+        // 调用计算圆锥表面积的方法
+        System.out.printf("圆锥的表面积为%.2f",cone.area());
+        // 四舍五入格式化不换行输出圆锥表面积，输出格式：圆锥的表面积为xx
+    }
+}
+/********** End **********/
