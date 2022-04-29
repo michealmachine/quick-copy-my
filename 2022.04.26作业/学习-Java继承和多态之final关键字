@@ -1,0 +1,53 @@
+/**
+ *  调试代码，对代码进行增添、删除和修改等操作，使得程序能够正常运行，输出结果请参照预期输出结果。
+ */
+
+// 请在下面的Begin-End之间编写正确的代码
+/********* Begin *********/
+public class Demo {
+    public static void main(String args[]) {
+        Bike1 obj = new Bike1();
+        obj.run();
+        Honda honda = new Honda();
+        honda.run();
+        Yamaha yamaha = new Yamaha();
+        yamaha.run();
+    }
+}
+
+
+class Bike1 {
+
+    int speedlimit = 90; // 定义速度限制
+
+    void run() {
+    	// 修改速度限制为 120，并输出
+        speedlimit = 120;
+        System.out.println("speedlimit=120");
+    }
+}
+
+class Bike2 {
+	// 输出 running
+    void run() {
+        System.out.println("running");
+    }
+}
+// 继承 Bike2 类
+class Honda extends Bike2 {
+	// 重写 run 方法
+    void run() {
+        System.out.println("running safely with 100kmph");
+    }
+
+}
+
+class Bike3 {
+}
+// 继承 Bike3 类
+class Yamaha extends Bike3 {
+    void run() {
+        System.out.println("running safely with 10kmph");
+    }
+}
+/********** End **********/
