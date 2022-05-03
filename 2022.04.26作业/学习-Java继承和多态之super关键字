@@ -1,29 +1,39 @@
-/**
- * 重写 Shape 中的 area 方法，计算球的表面积。
+/*
+* 根据要求补全 Salary 类，实现输出员工基本信息和薪水的功能。
  */
+class Employee {
+    private String name;// 员工姓名
+    private String birth;// 出生年月
+    private String position;// 职位
 
-class Shape {
-    private double r; //球的半径
-    // 球的体积
-    public double area(){
-        double s = (double)3/4*Math.PI*Math.pow(r,3);
-        return s;
+    // 使用有参构造方法初始化Employee
+    public Employee(String name, String birth, String position) {
+        this.name = name;
+        this.birth = birth;
+        this.position = position;
     }
+    // 定义 introduction 方法输出员工信息
+    public void introduction() {
+        System.out.println("员工姓名：" + name + "\n出生年月：" + birth + "\n职位：" + position);
+    }
+
 }
-public class Sphere extends Shape{
 
-    private double r; //球的半径
-    
-    public Sphere(double r) {
-        this.r = r;
-    }
+public class Salary extends Employee {
+    private double salary; // 薪水
     // 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
     /********* Begin *********/
-    // 重写 Shape 中的 area 方法，计算球的表面积，将计算结果返回
-    @Override
-    public double area(){
-        return 4*Math.PI*Math.pow(r,2);
+    // 定义Salary的有参构造方法，同时在子类中指代父类构造器
+    Salary(String name,String birth,String position,double salary){
+        super(name,birth,position);
+        this.salary=salary;
     }
+    @Override
+    public void introduction(){
+        super.introduction();
+        System.out.printf("薪水：%.1f",salary);
+    }
+    // 重写introduction方法，使用super保留父类原有的功能，新添输出员工薪水的功能
+
     /********** End **********/
 }
-
