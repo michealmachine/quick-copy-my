@@ -1,0 +1,35 @@
+/**
+ * 编写程序，实现两个数的求和运算和比较
+ */
+
+// 请在下面的Begin-End之间按照注释中给出的提示编写正确的代码
+/********** Begin **********/
+
+// 定义一个接口类 Compute
+interface Compute{
+    // 第一个为 sum()，实现两个数的相加，返回值为 int
+    int sum();
+    // 第二个为 max()，比较两个数的大小，携带两个参数，类型为int，返回值为int
+    int max(int x,int y);
+}
+// 定义一个公开的 ComputeClass 类并实现 Compute 接口
+public class ComputeClass implements Compute{
+    // 有两个属性，分别表示两个数，类型为 int
+    int x;
+    int y;
+    // 有参构造方法
+    ComputeClass(int x,int y){
+        this.x=x;
+        this.y=y;
+    }
+    // 实现接口中的求和方法
+    public int sum(){
+        return x+y;
+    }
+    // 实现接口中的获取较大数的方法
+    public int max(int x,int y){
+        if(x>y)return x;
+        else return y;
+    }
+}
+/********** End **********/
